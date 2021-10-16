@@ -12,7 +12,9 @@ function App() {
 
         <Menu/>
 
-        <Counter/>
+        <Counter name="Counter 1"/>
+        <Counter name="Counter 2"/>
+        <Counter name="Counter 3"/>
 
         <Content/>
 

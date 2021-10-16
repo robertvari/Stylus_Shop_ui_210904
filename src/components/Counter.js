@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import "./Counter.css"
 
 
@@ -7,12 +7,14 @@ function Counter(props) {
     const [name, set_name] = useState("")
 
     const set_number = () => {
-        if(count > 9){
-            set_name("Robert Vari")
-        }
-
         set_count(count + 1)
     }
+
+    useEffect(() => {
+        if(count > 10){
+            set_name("Robert")
+        }
+    }, [count])
 
     return (
         <div className="counter-container">
