@@ -1,8 +1,19 @@
+function Menu(){
+    return(
+        <div>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+        </div>
+    )
+}
+
 function Header(){
     return (
-        <h1>
-            Menu
-        </h1>
+        <div>
+            Header..
+            <Menu/>
+        </div>
     )
 }
 
@@ -16,13 +27,14 @@ function Content() {
         )
 }
 
-function Footer(){
+function Footer({title, phone, email, address}){
     return (
         <div>
             <hr/>
-            Stylus Photography
-            <p>Phone: 123456</p>
-            <p>Email: photography@gmail.com</p>
+            <div>{title}</div>
+            <div>{phone}</div>
+            <div>{email}</div>
+            <div>{address}</div>
         </div>
     )
 }
@@ -31,11 +43,16 @@ function App() {
   return (
 
     <div>
-        <Header/>
+        <Header name="Robert Vari"/>
 
         <Content/>
 
-        <Footer/>
+        <Footer
+            title="STYLUS PHOTOGRAPHY"
+            phone="+36-70-3696077"
+            email="szmatefy@gmail.com"
+            address="Budapest, Hungary"
+        />
     </div>
 
   );
