@@ -10,7 +10,12 @@ function App() {
 
         <Content/>
 
-        <Footer/>
+        <Footer
+            title="Stylus Photography"
+            address="Budapest, Hungary"
+            phone="+36-70-3696077"
+            email="szmatefy@gmail.com"
+        />
     </div>
 
   );

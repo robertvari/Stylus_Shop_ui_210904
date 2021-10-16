@@ -2,7 +2,11 @@ import React from 'react';
 
 function Menu(props) {
     return (
-        <div>Menu</div>
+        <div>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+        </div>
     );
 }
 

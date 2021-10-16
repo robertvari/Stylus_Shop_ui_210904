@@ -1,8 +1,13 @@
 import React from 'react';
 
-function Footer(props) {
+function Footer({title, address, phone, email}) {
     return (
-        <div>Footer</div>
+        <div>
+            <div>{title}</div>
+            <div>{address}</div>
+            <div>{phone}</div>
+            <div>{email}</div>
+        </div>
     );
 }
 
