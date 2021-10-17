@@ -1,4 +1,24 @@
 .footer-container{
-  max-width: $content-width;
-  margin: 0 auto;
+  background-color: $footer-background-color;
+  padding: 20px 0;
+
+  .content-container{
+    display: grid;
+    grid-template-columns: 150px auto 250px;
+
+    .newsletter-box{
+      display: flex;
+
+      button{
+        background-color: rgba(0, 0, 0, 0.1);
+        border: none;
+        color: rgba(0, 0, 0, 0.5);
+        margin-left: 5px;
+      }
+    }
+  }
+
+  div{
+    font-size: 12px;
+  }
 }
