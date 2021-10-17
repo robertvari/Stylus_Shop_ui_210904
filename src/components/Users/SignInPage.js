@@ -10,7 +10,7 @@ function SignInPage(props) {
                 <input type="email" placeholder="Email"/>
                 <input type="password" placeholder="Password"/>
 
-                <small><Link to="/password-reset">Forgot your password?</Link></small>
+                <small><Link to="/users/password-reset">Forgot your password?</Link></small>
                 <br/>
 
                 <button className="inverted">SIGN IN</button>

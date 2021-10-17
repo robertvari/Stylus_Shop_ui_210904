@@ -10,6 +10,7 @@ import {
   Route,
 } from "react-router-dom";
 
+import PasswordResetPage from "./components/Users/PasswordResetPage";
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
                 <Header/>
 
                 <Switch>
-                    <Route path="/login" component={SignInPage}/>
-                    <Route path="/registration" component={RegistrationPage}/>
+                    <Route path="/users/login" component={SignInPage}/>
+                    <Route path="/users/registration" component={RegistrationPage}/>
+                    <Route path="/users/password-reset" component={PasswordResetPage}/>
                     <Route path="/" component={HomePage}/>
                 </Switch>
             </div>
