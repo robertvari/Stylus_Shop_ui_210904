@@ -5,7 +5,17 @@ function Header(props) {
         <div className="header-container">
 
             <div className="content-container">
-                <h1>Stylus Shop</h1>
+                <div className="title-container">
+                    <h1>Stylus Shop</h1>
+
+                    <div className="search-container">
+                        <small><a href="">Sign in</a> or <a href="">Create an Account</a></small>
+                        <input type="search"/>
+                        <button>CART</button>
+                    </div>
+
+                </div>
+                
 
                 <div className="menu">
                     <div className="menu-item">CAMERAS</div>
