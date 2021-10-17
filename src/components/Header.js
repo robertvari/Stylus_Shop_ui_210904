@@ -9,13 +9,13 @@ function Menu(){
         axios({
             method: "get",
             url: "http://localhost:3001/categories"
-        }).then(res => console.log(res.data))
+        }).then(res => set_menu_list(res.data))
     }, [])
 
     return(
         <div className="menu">
             {
-              menu_list.map(item_data => <div>{item_data.title}</div>)
+              menu_list.map(item_data => <div className="menu-item">{item_data.title}</div>)
             }
         </div>
     )
