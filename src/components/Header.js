@@ -9,9 +9,14 @@ function Header(props) {
                     <h1>Stylus Shop</h1>
 
                     <div>
-                        <small><a href="">Sign in</a> or <a href="">Create an Account</a></small>
+                        <small className="sign-in-container"><a href="">Sign in</a> or <a href="">Create an Account</a></small>
                         <br/>
-                        <input type="search" placeholder="Search all products..."/>
+
+                        <div className="search-box">
+                            <input type="text" placeholder="Search all products..."/>
+                            <i className="fas fa-search"/>
+                        </div>
+
 
                         <button><i className="fas fa-shopping-cart"/> CART</button>
                     </div>

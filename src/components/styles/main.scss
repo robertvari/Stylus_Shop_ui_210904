@@ -22,7 +22,7 @@ button{
   background-color: transparent;
   cursor: pointer;
   color: $default-blue;
-  border-radius: 5px;
+  border-radius: $default-radius;
 
   i{
     padding-right: 5px;
@@ -39,6 +39,6 @@ input{
   padding: 10px;
   font: inherit;
   border: none;
-  border-radius: 5px;
+  border-radius: $default-radius;
   background-color: rgba(0, 0, 0, 0.1);
 }
