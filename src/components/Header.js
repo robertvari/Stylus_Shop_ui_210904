@@ -12,6 +12,7 @@ function Header(props) {
                         <small><a href="">Sign in</a> or <a href="">Create an Account</a></small>
                         <br/>
                         <input type="search"/>
+
                         <button><i className="fas fa-shopping-cart"/> CART</button>
                     </div>
 

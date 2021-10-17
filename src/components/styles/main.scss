@@ -14,3 +14,26 @@ body{
   font-family: 'Roboto', sans-serif;
   color: #585858;
 }
+
+button{
+  padding: 10px;
+  font: inherit;
+  border: 2px solid $default-blue;
+  background-color: transparent;
+  cursor: pointer;
+  color: $default-blue;
+
+  i{
+    padding-right: 5px;
+    font-size: 20px;
+  }
+}
+
+.inverted{
+  background-color: $default-blue;
+  color: white;
+}
+
+input{
+
+}
