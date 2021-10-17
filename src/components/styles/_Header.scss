@@ -70,5 +70,10 @@
 
   .menu{
     display: flex;
+
+    .menu-item{
+      margin-right: 20px;
+      cursor: pointer;
+    }
   }
 }
