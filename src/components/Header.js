@@ -11,7 +11,7 @@ function Header(props) {
                     <div>
                         <small><a href="">Sign in</a> or <a href="">Create an Account</a></small>
                         <br/>
-                        <input type="search"/>
+                        <input type="search" placeholder="Search all products..."/>
 
                         <button><i className="fas fa-shopping-cart"/> CART</button>
                     </div>
