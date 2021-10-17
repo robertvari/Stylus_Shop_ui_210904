@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import HomePage from "./components/HomePage";
+import HomePage from "./components/Home/HomePage";
 import SignInPage from "./components/Users/SignInPage";
 import RegistrationPage from "./components/Users/RegistrationPage";
 
