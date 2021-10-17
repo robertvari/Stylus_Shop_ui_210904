@@ -3,7 +3,20 @@ import React from 'react';
 function Header(props) {
     return (
         <div className="header-container">
-            Header
+
+            <div className="content-container">
+                <h1>Stylus Shop</h1>
+
+                <div className="menu">
+                    <div className="menu-item">CAMERAS</div>
+                    <div className="menu-item">CASES</div>
+                    <div className="menu-item">VIDEO</div>
+                    <div className="menu-item">ACCESSORIES</div>
+                    <div className="menu-item">SPORT OPTICS</div>
+                    <div className="menu-item">LIFESTYLE</div>
+                </div>
+            </div>
+
         </div>
     );
 }

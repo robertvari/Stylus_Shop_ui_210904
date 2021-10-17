@@ -1,4 +1,18 @@
 .header-container{
-  max-width: $content-width;
-  margin: 0 auto;
+  background-color: $header-background-color;
+  color: $header-color;
+  padding: 10px 0;
+  height: $header-height;
+
+  .content-container{
+    display: flex;
+    height: 100%;
+
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .menu{
+    display: flex;
+  }
 }
