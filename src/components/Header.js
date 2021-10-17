@@ -8,8 +8,9 @@ function Header(props) {
                 <div className="title-container">
                     <h1>Stylus Shop</h1>
 
-                    <div className="search-container">
+                    <div>
                         <small><a href="">Sign in</a> or <a href="">Create an Account</a></small>
+                        <br/>
                         <input type="search"/>
                         <button>CART</button>
                     </div>
