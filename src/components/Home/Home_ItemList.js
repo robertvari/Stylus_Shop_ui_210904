@@ -3,7 +3,7 @@ function HomeItemList({title, items}) {
         <h3>{title}</h3>
 
         {
-            items.map(item_data => <div>{item_data}</div>)
+            items.map(item_data => <div key={item_data.id}>{item_data.summary}</div>)
         }
     </div>
 }

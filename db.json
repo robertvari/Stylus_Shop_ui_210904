@@ -12,6 +12,43 @@
     {"id": 4, "title": "Sport Optics", "image":"https://cdn.shopify.com/s/files/1/0543/1637/products/Colorline_8x20_pigeon_blue-1_125x.jpg?v=1484757635", "items": null},
     {"id": 5, "title": "Lifestyle", "image":"https://cdn.shopify.com/s/files/1/0543/1637/products/TBPhotography-7845-1_6815f5e5-f432-415a-82ac-de6546f16f38_125x.jpg?v=1484756182", "items": null}
   ],
+  "leica_m": [
+    {
+        "id": 0,
+        "summary": "LEICA M-A (TYP 127), BLACK CHROME FINISH",
+        "price": "$4,195",
+        "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/Leica-M-A-0002_360x.jpg?v=1484764179",
+        "slug": ""
+    },
+    {
+        "id": 1,
+        "summary": "LEICA M-A (TYP 127), BLACK CHROME FINISH",
+        "price": "$4,195",
+        "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/Leica-M-A-0002_360x.jpg?v=1484764179",
+        "slug": ""
+    },
+    {
+        "id": 2,
+        "summary": "LEICA M-A (TYP 127), BLACK CHROME FINISH",
+        "price": "$4,195",
+        "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/Leica-M-A-0002_360x.jpg?v=1484764179",
+        "slug": ""
+    },
+    {
+        "id": 3,
+        "summary": "LEICA M-A (TYP 127), BLACK CHROME FINISH",
+        "price": "$4,195",
+        "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/Leica-M-A-0002_360x.jpg?v=1484764179",
+        "slug": ""
+    },
+    {
+        "id": 4,
+        "summary": "LEICA M-A (TYP 127), BLACK CHROME FINISH",
+        "price": "$4,195",
+        "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/Leica-M-A-0002_360x.jpg?v=1484764179",
+        "slug": ""
+    }
+  ],
   "slider": [
     {
       "id": 0,

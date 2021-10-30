@@ -13,12 +13,15 @@ function HomePage(props) {
     const fetch_featured_list = () => {
         axios({
             method: "get",
-            url: ""
-        })
+            url: `${process.env.REACT_APP_API_URL}/featured`
+        }).then(res => set_featured_list(res.data))
     }
 
     const fetch_analog_cameras = () => {
-      set_analog_cameras([1, 2, 3, 4, 5])
+        axios({
+            method: "get",
+            url: `${process.env.REACT_APP_API_URL}/analog`
+        }).then(res => set_analog_cameras(res.data))
     }
 
     const fetch_leica_M = () => {
@@ -26,9 +29,9 @@ function HomePage(props) {
     }
 
     useEffect(() => {
-        fetch_analog_cameras()
-        fetch_leica_M()
         fetch_featured_list()
+        fetch_analog_cameras()
+        // fetch_leica_M()
     }, [])
 
     return (

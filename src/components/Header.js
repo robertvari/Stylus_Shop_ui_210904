@@ -28,7 +28,7 @@ function Menu(){
     useEffect(() => {
         axios({
             method: "get",
-            url: "http://localhost:3001/categories"
+            url: `${process.env.REACT_APP_API_URL}/categories`
         }).then(res => set_menu_list(res.data))
     }, [])
 
