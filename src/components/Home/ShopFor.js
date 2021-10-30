@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
+import {Link} from "react-router-dom"
 
 function CategoryItem({title, image}){
-    return <div>
-        {title}
-    </div>
+    return <Link className="category-card">
+        <div className="image-container" style={{backgroundImage: `url(${image})`}}/>
+        <small>{title}</small>
+    </Link>
 }
 
 function ShopFor(props) {

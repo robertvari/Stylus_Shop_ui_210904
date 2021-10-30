@@ -1,9 +1,30 @@
 .collection-container{
-  height: 180px;
-  margin: 10px 0;
-  border: 1px solid red;
+  margin: 20px 0;
+
+  h3{
+    margin-bottom: 20px;
+  }
 
   .item-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    .category-card{
+      background-color: rgba(0, 0, 0, 0.1);
+      border: $border-style;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 5px;
+      color: #636363;
+
+      .image-container{
+        width: 100%;
+        height: 150px;
+        background-position: center;
+        background-size: cover;
+      }
+    }
   }
 }
