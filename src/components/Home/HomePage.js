@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react';
 import Slider from "./Slider";
 import ShopFor from "./ShopFor";
 import Home_ItemList from "./Home_ItemList";
+import axios from "axios"
+
 
 function HomePage(props) {
     const [featured_list, set_featured_list] = useState([])
@@ -9,7 +11,10 @@ function HomePage(props) {
     const [leica_M, set_leica_M] = useState([])
 
     const fetch_featured_list = () => {
-        set_featured_list([1, 2])
+        axios({
+            method: "get",
+            url: ""
+        })
     }
 
     const fetch_analog_cameras = () => {
