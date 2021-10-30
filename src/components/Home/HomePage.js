@@ -39,6 +39,8 @@ function HomePage(props) {
 
     return (
         <div className="content-container">
+            <div className="content-offset"/>
+
             <Slider/>
 
             <hr/>

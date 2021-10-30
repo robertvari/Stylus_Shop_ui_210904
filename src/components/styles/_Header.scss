@@ -3,6 +3,9 @@
   color: $header-color;
   padding: 10px 0;
   height: $header-height;
+  position: fixed;
+  width: 100%;
+  filter: drop-shadow(0 5px 4px rgba(0, 0, 0, 0.2));
 
   .content-container{
     display: flex;
