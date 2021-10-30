@@ -11,6 +11,13 @@ function MenuItem({item_data}){
             item_data.items && <i className="fas fa-caret-down"/>
         }
 
+        {
+            item_data.items && <div className="popup-menu">
+                {
+                    item_data.items.map(i => <small key={i} className="menu-item">{i}</small>)
+                }
+            </div>
+        }
 
     </div>
 }
