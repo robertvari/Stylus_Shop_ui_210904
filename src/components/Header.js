@@ -4,7 +4,7 @@ import axios from "axios"
 
 function MenuItem({item_data}){
 
-    return <div className="menu-item">
+    return <Link to={`/categories/${item_data.title}`} className="menu-item">
         {item_data.title.toUpperCase()}
 
         {
@@ -14,12 +14,12 @@ function MenuItem({item_data}){
         {
             item_data.items && <div className="popup-menu">
                 {
-                    item_data.items.map(i => <small key={i} className="menu-item">{i}</small>)
+                    item_data.items.map(i => <Link to={`/categories/${item_data.title}/${i}`} key={i} className="menu-item">{i}</Link>)
                 }
             </div>
         }
 
-    </div>
+    </Link>
 }
 
 function Menu(){
