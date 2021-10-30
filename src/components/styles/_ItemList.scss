@@ -20,4 +20,11 @@
   img{
     width: 100%;
   }
+
+  &:hover{
+    img{
+      opacity: 0.8;
+      transition: opacity 0.4s;
+    }
+  }
 }
