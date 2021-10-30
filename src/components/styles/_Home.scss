@@ -1,5 +1,9 @@
 .collection-container{
   height: 180px;
-  background-color: yellow;
   margin: 10px 0;
+  border: 1px solid red;
+
+  .item-container{
+    display: flex;
+  }
 }

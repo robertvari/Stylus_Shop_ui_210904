@@ -25,6 +25,11 @@ body{
   }
 }
 
+hr{
+  border: none;
+  border-top: $border-style;
+}
+
 button{
   padding: 10px;
   font: inherit;

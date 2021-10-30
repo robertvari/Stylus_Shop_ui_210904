@@ -1,9 +1,32 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import axios from "axios";
+
+function CategoryItem({title, image}){
+    return <div>
+        {title}
+    </div>
+}
 
 function ShopFor(props) {
+    const [category_list, set_category_list] = useState([])
+
+    useEffect(() => {
+        axios({
+            method: "get",
+            url: `${process.env.REACT_APP_API_URL}/categories`
+        }).then(res => set_category_list(res.data))
+    }, [])
+
     return (
         <div className="collection-container">
-            SHOP FOR
+            <h3>SHOP FOR</h3>
+
+            <div className="item-container">
+                {
+                    category_list.map(data => <CategoryItem key={data.id} title={data.title} image={data.image}/>)
+                }
+            </div>
+
         </div>
     );
 }

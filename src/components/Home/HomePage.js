@@ -25,24 +25,35 @@ function HomePage(props) {
     }
 
     const fetch_leica_M = () => {
-        set_leica_M([1, 2, 3])
+        axios({
+            method: "get",
+            url: `${process.env.REACT_APP_API_URL}/leica_m`
+        }).then(res => set_leica_M(res.data))
     }
 
     useEffect(() => {
         fetch_featured_list()
         fetch_analog_cameras()
-        // fetch_leica_M()
+        fetch_leica_M()
     }, [])
 
     return (
         <div className="content-container">
             <Slider/>
 
+            <hr/>
+
             <ShopFor/>
+
+            <hr/>
 
             <Home_ItemList title="FEATURED COLLECTION" items={featured_list}/>
 
+            <hr/>
+
             <Home_ItemList title="ANALOG CAMERAS" items={analog_cameras}/>
+
+            <hr/>
 
             <Home_ItemList title="LEICA M" items={leica_M}/>
         </div>
