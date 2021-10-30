@@ -15,35 +15,35 @@
   "leica_m": [
     {
         "id": 0,
-        "summary": "LEICA M-A (TYP 127), BLACK CHROME FINISH",
+        "title": "LEICA M-A (TYP 127), BLACK CHROME FINISH",
         "price": "$4,195",
         "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/Leica-M-A-0002_360x.jpg?v=1484764179",
         "slug": ""
     },
     {
         "id": 1,
-        "summary": "LEICA M-A (TYP 127), BLACK CHROME FINISH",
+        "title": "LEICA M-A (TYP 127), BLACK CHROME FINISH",
         "price": "$4,195",
         "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/Leica-M-A-0002_360x.jpg?v=1484764179",
         "slug": ""
     },
     {
         "id": 2,
-        "summary": "LEICA M-A (TYP 127), BLACK CHROME FINISH",
+        "title": "LEICA M-A (TYP 127), BLACK CHROME FINISH",
         "price": "$4,195",
         "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/Leica-M-A-0002_360x.jpg?v=1484764179",
         "slug": ""
     },
     {
         "id": 3,
-        "summary": "LEICA M-A (TYP 127), BLACK CHROME FINISH",
+        "title": "LEICA M-A (TYP 127), BLACK CHROME FINISH",
         "price": "$4,195",
         "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/Leica-M-A-0002_360x.jpg?v=1484764179",
         "slug": ""
     },
     {
         "id": 4,
-        "summary": "LEICA M-A (TYP 127), BLACK CHROME FINISH",
+        "title": "LEICA M-A (TYP 127), BLACK CHROME FINISH",
         "price": "$4,195",
         "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/Leica-M-A-0002_360x.jpg?v=1484764179",
         "slug": ""
@@ -75,35 +75,35 @@
     {
       "id": 0,
       "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/1347910998_125x.jpg?v=1484754685",
-      "summary": "Leica S (Typ 006)",
+      "title": "Leica S (Typ 006)",
       "price": "$18,500.00",
       "slug": ""
     },
     {
       "id": 1,
       "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/Leica_S-002_540x.jpg?v=1484770884",
-      "summary": "Leica S (Typ 006) / 70mm Lens Set",
+      "title": "Leica S (Typ 006) / 70mm Lens Set",
       "price": "$15,995.00",
       "slug": ""
     },
     {
       "id": 2,
       "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/emo_Leica_S_Typ007_1_540x.jpg?v=1484764351",
-      "summary": "Leica S (Typ 007)",
+      "title": "Leica S (Typ 007)",
       "price": "$16,900.00",
       "slug": ""
     },
     {
       "id": 3,
       "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/E82_lens_cap_S_720x.jpg?v=1484756588",
-      "summary": "Leica S and SL Lens Cap E82",
+      "title": "Leica S and SL Lens Cap E82",
       "price": "$60.00",
       "slug": ""
     },
     {
       "id": 4,
       "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/100_years_s_720x.jpg?v=1484759453",
-      "summary": "Leica S Edition 100 Set",
+      "title": "Leica S Edition 100 Set",
       "price": "$34,500.00",
       "slug": ""
     }
@@ -112,35 +112,35 @@
     {
       "id": 0,
       "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/M_a_la_carte_Instagram_180x.jpg?v=1484774521",
-      "summary": "Leica M (Typ 240) à la carte Program",
+      "title": "Leica M (Typ 240) à la carte Program",
       "price": "$6,380.00",
       "slug": ""
     },
     {
       "id": 1,
       "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/Leica_M_Edition_60_1_360x.jpg?v=1484764172",
-      "summary": "Leica M (Typ 240) Edition \"Leica 60\"",
+      "title": "Leica M (Typ 240) Edition \"Leica 60\"",
       "price": "$18,500.00",
       "slug": ""
     },
     {
       "id": 2,
       "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/35_75_Bundle_Shopify_360x.jpg?v=1484780789",
-      "summary": "Leica M (Typ 262) Bundle with Summarit-M 35mm f/2.4, 75mm f/2.4, SF 40, System Case M",
+      "title": "Leica M (Typ 262) Bundle with Summarit-M 35mm f/2.4, 75mm f/2.4, SF 40, System Case M",
       "price": "$8,495.00",
       "slug": ""
     },
     {
       "id": 3,
       "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/35_Bundle_Shopify_180x.jpg?v=1484780798",
-      "summary": "Leica M (Typ 262) Bundle with Summarit-M 35mm f/2.4, SF 40, System Case M",
+      "title": "Leica M (Typ 262) Bundle with Summarit-M 35mm f/2.4, SF 40, System Case M",
       "price": "$6,995.00",
       "slug": ""
     },
     {
       "id": 4,
       "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/M240_silver_1_360x.jpg?v=1484754671",
-      "summary": "Leica M - Silver Chrome (Typ 240)",
+      "title": "Leica M - Silver Chrome (Typ 240)",
       "price": "$7,250.00",
       "slug": ""
     }

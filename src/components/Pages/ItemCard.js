@@ -4,7 +4,7 @@ function ItemCard({data}) {
     return (
         <div>
             <img src={data.image} alt=""/>
-            <small>{data.summary}</small>
+            <small>{data.title}</small>
             <small>{data.price}</small>
         </div>
     );
