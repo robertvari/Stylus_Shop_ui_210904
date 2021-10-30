@@ -1,12 +1,13 @@
 import React from 'react';
+import {Link} from "react-router-dom"
 
 function ItemCard({data}) {
     return (
-        <div>
+        <Link className="item-card">
             <img src={data.image} alt=""/>
-            <small>{data.title}</small>
-            <small>{data.price}</small>
-        </div>
+            <div className="title">{data.title}</div>
+            <div className="price">{data.price}</div>
+        </Link>
     );
 }
 

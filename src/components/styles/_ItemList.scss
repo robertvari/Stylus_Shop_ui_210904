@@ -1,0 +1,23 @@
+.item-card{
+  padding: 5px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+  .title{
+    font-weight: bold;
+    color: #585858;
+  }
+
+  .price{
+    font-weight: bolder;
+    color: black;
+    align-self: flex-end;
+  }
+
+  img{
+    width: 100%;
+  }
+}
