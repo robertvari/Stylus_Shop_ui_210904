@@ -59,6 +59,12 @@ export const ShoppingCartProvider = (props) => {
         set_new_shopping_list(_shopping_list)
     }
 
+    const remove_from_cart = (item_id) => {
+        const _shopping_list = shopping_list.filter(item => item.id !== item_id)
+
+        set_new_shopping_list(_shopping_list)
+    }
+
     useEffect(() => {
         calc_count()
         calc_total()
@@ -77,7 +83,8 @@ export const ShoppingCartProvider = (props) => {
             total: total,
             count: count,
 
-            add_to_cart: add_to_cart
+            add_to_cart: add_to_cart,
+            remove_from_cart: remove_from_cart
         }}>
             {props.children}
         </ShoppingCartContext.Provider>
