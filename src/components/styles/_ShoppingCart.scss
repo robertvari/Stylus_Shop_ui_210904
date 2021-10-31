@@ -39,6 +39,22 @@
   grid-template-columns: 121px 350px 127px auto 22px;
   align-items: center;
 
+  i{
+    cursor: pointer;
+  }
+
+  .quantity-container{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+
+    i{
+      margin: 5px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+
   img{
     width: 100%;
   }
