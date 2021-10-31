@@ -1,19 +1,25 @@
-import React, {createContext} from "react";
+import React, {createContext, useEffect, useState} from "react";
+import axios from "axios";
 
 export const ItemListContext = createContext(true)
 
 export const ItemListProvider = (props) => {
+    const [items, set_items] = useState([])
 
-    const print_hello = () => {
-        console.log("hello from ItemListContext")
+    const fetch_item_list = () => {
+        axios({
+            method: "get",
+            url: `${process.env.REACT_APP_API_URL}/items`
+        }).then(res => set_items(res.data))
     }
+
+    useEffect(() => {
+        fetch_item_list()
+    }, [])
 
     return (
         <ItemListContext.Provider value={{
-
-            user_name : "Robert Vari",
-            print_hello: print_hello
-
+            items: items
         }}>
             {props.children}
         </ItemListContext.Provider>

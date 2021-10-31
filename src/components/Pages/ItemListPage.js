@@ -1,24 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 import ItemCard from "./ItemCard";
-import axios from "axios"
+import {ItemListContext} from "../Contexts/ItemListContext";
 
 
 function ItemListPage(props) {
     const {category} = useParams()
     const {subcategory} = useParams()
-    const [items, set_items] = useState([])
-
-    const fetch_item_list = () => {
-        axios({
-            method: "get",
-            url: `${process.env.REACT_APP_API_URL}/items`
-        }).then(res => set_items(res.data))
-    }
-
-    useEffect(() => {
-        fetch_item_list()
-    }, [])
+    const {items} = useContext(ItemListContext)
 
     return (
         <div className="content-container">
