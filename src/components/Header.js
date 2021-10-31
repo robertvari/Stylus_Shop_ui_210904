@@ -43,9 +43,9 @@ function Menu(){
 }
 
 function CartButton(){
-    const {count} = useContext(ShoppingCartContext)
+    const {count, set_visible} = useContext(ShoppingCartContext)
 
-    return <button className="cart-button">
+    return <button className="cart-button" onClick={e => set_visible(true)}>
         <i className="fas fa-shopping-cart"/> CART
         {
             count>0 && <div className="item-count">{count}</div>

@@ -7,6 +7,9 @@ export const ShoppingCartProvider = (props) => {
     const [total, set_total] = useState(0)
     const [count, set_count] = useState(0)
 
+    // shopping cart visibility
+    const [visible, set_visible] = useState(false)
+
     const set_new_shopping_list = (new_shopping_list) => {
         set_shopping_list(new_shopping_list)
         localStorage.setItem("shopping_list", JSON.stringify(new_shopping_list))
@@ -82,6 +85,8 @@ export const ShoppingCartProvider = (props) => {
             shopping_list: shopping_list,
             total: total,
             count: count,
+            visible: visible,
+            set_visible: set_visible,
 
             add_to_cart: add_to_cart,
             remove_from_cart: remove_from_cart

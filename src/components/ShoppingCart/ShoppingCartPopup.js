@@ -3,11 +3,14 @@ import {ShoppingCartContext} from "../Contexts/ShoppingCartContext";
 import CartItem from "./CartItem";
 
 function ShoppingCartPopup(props) {
-    const {shopping_list, total} = useContext(ShoppingCartContext)
+    const {shopping_list, total, visible, set_visible} = useContext(ShoppingCartContext)
+
+    if(!visible) return null
 
     return (
-        <div className="cart-container">
-            <div className="cart-details">
+        <div className="cart-container" onClick={e => set_visible(false)}>
+
+            <div className="cart-details" onClick={e => e.stopPropagation()}>
                 <h3>SHOPPING CART</h3>
                 <hr/>
                 {
