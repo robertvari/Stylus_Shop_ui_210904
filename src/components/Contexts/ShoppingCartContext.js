@@ -7,9 +7,29 @@ export const ShoppingCartProvider = (props) => {
     const [total, set_total] = useState(0)
     const [count, set_count] = useState(0)
 
+    const is_in_cart = (item_id) => {
+        const result = shopping_list.find(data => data.id === item_id)
+        return !!result
+    }
+
     const add_to_cart = (item_data) => {
-        console.log(`Item: ${item_data.title} was added to shopping cart.`)
-        set_count(count + 1)
+        const _item_data = item_data
+        const _shopping_list = [...shopping_list]
+
+        if(is_in_cart(item_data.id)){
+            for(let i = 0; i<_shopping_list.length;i++){
+                let _item = _shopping_list[i]
+                if(_item.id === item_data.id){
+                    _item.quantity ++
+                    break
+                }
+            }
+        }else{
+            _item_data.quantity = 1
+            _shopping_list.push(_item_data)
+        }
+
+        console.log(_item_data)
     }
 
     return (

@@ -18,7 +18,7 @@ function ItemPage({data}){
             <hr/>
 
             <div className="button-container">
-                <button onClick={add_to_cart}><i className="fas fa-cart-plus"/> ADD TO CART</button>
+                <button onClick={e => add_to_cart(data)}><i className="fas fa-cart-plus"/> ADD TO CART</button>
                 <br/>
                 <button className="inverted">BUY IT NOW</button>
             </div>
