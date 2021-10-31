@@ -1,0 +1,15 @@
+.item-details-container{
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 350px auto;
+
+  .button-container{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  img{
+    width: 100%;
+  }
+}
