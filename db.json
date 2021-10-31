@@ -148,6 +148,7 @@
   "items": [
     {
       "id": 0,
+      "slug": "leica-m",
       "category": "Cameras",
       "subcategory": "Leica M",
       "title": "LEICA M-A (TYP 127), BLACK CHROME FINISH",
@@ -159,6 +160,7 @@
     },
     {
       "id": 1,
+      "slug": "leica-m-type-127",
       "category": "Cameras",
       "subcategory": "Leica M",
       "title": "LEICA M-A (TYP 127), SILVER CHROME FINISH",
@@ -170,6 +172,7 @@
     },
     {
       "id": 2,
+      "slug": "leica-m-black",
       "category": "Cameras",
       "subcategory": "Leica M",
       "title": "LEICA M7 - BLACK (0.72)",
