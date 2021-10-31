@@ -1,6 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
 import axios from "axios"
+import {ShoppingCartContext} from "./Contexts/ShoppingCartContext";
 
 function MenuItem({item_data}){
 
@@ -41,6 +42,16 @@ function Menu(){
     )
 }
 
+function CartButton(){
+    const {count} = useContext(ShoppingCartContext)
+
+    return <button className="cart-button">
+        <i className="fas fa-shopping-cart"/> CART
+        {
+            count>0 && <div className="item-count">{count}</div>
+        }
+    </button>
+}
 
 function Header(props) {
     return (
@@ -60,7 +71,7 @@ function Header(props) {
                         </div>
 
 
-                        <button><i className="fas fa-shopping-cart"/> CART</button>
+                        <CartButton/>
                     </div>
 
                 </div>

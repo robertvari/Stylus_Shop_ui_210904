@@ -19,6 +19,26 @@
       display: flex;
       justify-content: space-between;
 
+      .cart-button{
+        position: relative;
+
+        .item-count{
+          position: absolute;
+          right: -5px;
+          top: -5px;
+          background-color: #dd2525;
+          color: #182e49;
+          width: 20px;
+          height: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: bold;
+          border-radius: 50%;
+          font-size: 14px;
+        }
+      }
+
       .sign-in-container{
         width: 100%;
       }
