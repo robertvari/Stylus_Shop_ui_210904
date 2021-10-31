@@ -4,7 +4,7 @@ import HomePage from "./components/Home/HomePage";
 import SignInPage from "./components/Users/SignInPage";
 import RegistrationPage from "./components/Users/RegistrationPage";
 import ItemListPage from "./components/Pages/ItemListPage";
-
+import ItemDetailsPage from "./components/Pages/ItemDetailsPage";
 
 import {
   BrowserRouter as Router,
@@ -23,6 +23,7 @@ function App() {
 
                 <Switch>
                     <Route path="/categories/:category/:subcategory?" component={ItemListPage}/>
+                    <Route path="/details/:slug" component={ItemDetailsPage}/>
 
                     <Route path="/users/login" component={SignInPage}/>
                     <Route path="/users/registration" component={RegistrationPage}/>
