@@ -27,7 +27,8 @@ function ItemListPage(props) {
 
             <div className="item-list-container">
                 {
-                    items.map(item_data => <ItemCard key={item_data.id} data={item_data}/>)
+                    items.filter(item_data => subcategory? item_data.category === category && subcategory === item_data.subcategory : item_data.category === category)
+                        .map(item_data => <ItemCard key={item_data.id} data={item_data}/>)
                 }
             </div>
         </div>

@@ -6,6 +6,7 @@
   position: fixed;
   width: 100%;
   filter: drop-shadow(0 5px 4px rgba(0, 0, 0, 0.2));
+  z-index: 100;
 
   .content-container{
     display: flex;
