@@ -15,6 +15,7 @@ import {
 import PasswordResetPage from "./components/Users/PasswordResetPage";
 import {ItemListProvider} from "./components/Contexts/ItemListContext";
 import {ShoppingCartProvider} from "./components/Contexts/ShoppingCartContext";
+import ShoppingCartPopup from "./components/ShoppingCart/ShoppingCartPopup";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
             <ShoppingCartProvider>
 
                 <div className="App">
+                    <ShoppingCartPopup/>
+
                     <div>
                         <Header/>
 

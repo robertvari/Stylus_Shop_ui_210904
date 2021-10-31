@@ -1,0 +1,34 @@
+.cart-container{
+  position: fixed;
+  z-index: 200;
+  background-color: rgba(255,255,255, 0.7);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .cart-details{
+    width: 800px;
+    background-color: white;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
+    padding: 10px;
+    border-radius: $default-radius;
+    display: flex;
+    flex-direction: column;
+
+    .price, .taxes, button{
+      align-self: flex-end;
+    }
+
+    .price{
+      margin-bottom: 10px;
+    }
+
+    button{
+      margin-top: 30px;
+    }
+  }
+}
