@@ -1,8 +1,14 @@
 import React from 'react';
 
-function CartItem(props) {
+function CartItem({data}) {
     return (
-        <div>Cart Item</div>
+        <div className="cart-item-container">
+            <img src={data.image} alt=""/>
+            <div>{data.title}</div>
+            <div>quantity...</div>
+            <h3>${data.price}</h3>
+            <i className="fas fa-trash-alt"/>
+        </div>
     );
 }
 

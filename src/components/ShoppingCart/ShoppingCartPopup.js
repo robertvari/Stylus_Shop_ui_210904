@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import {ShoppingCartContext} from "../Contexts/ShoppingCartContext";
+import CartItem from "./CartItem";
 
 function ShoppingCartPopup(props) {
     const {shopping_list, total} = useContext(ShoppingCartContext)
@@ -10,7 +11,7 @@ function ShoppingCartPopup(props) {
                 <h3>SHOPPING CART</h3>
                 <hr/>
                 {
-                    shopping_list.map(data => <div key={data.id}>{data.title}</div>)
+                    shopping_list.map(data => <CartItem key={data.id} data={data}/>)
                 }
                 <hr/>
 
