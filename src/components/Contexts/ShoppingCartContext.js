@@ -1,4 +1,4 @@
-import React, {createContext, useState} from "react";
+import React, {createContext, useEffect, useState} from "react";
 
 export const ShoppingCartContext = createContext(true)
 
@@ -10,6 +10,20 @@ export const ShoppingCartProvider = (props) => {
     const is_in_cart = (item_id) => {
         const result = shopping_list.find(data => data.id === item_id)
         return !!result
+    }
+
+    const calc_count = () => {
+        let _count = 0
+        for(let i=0;i<shopping_list.length;i++){
+            let _item = shopping_list[i]
+            _count += _item.quantity
+        }
+
+        set_count(_count)
+    }
+
+    const calc_total = () => {
+
     }
 
     const add_to_cart = (item_data) => {
@@ -31,6 +45,11 @@ export const ShoppingCartProvider = (props) => {
 
         set_shopping_list(_shopping_list)
     }
+
+    useEffect(() => {
+        calc_count()
+        calc_total()
+    }, [shopping_list])
 
     return (
         <ShoppingCartContext.Provider value={{
