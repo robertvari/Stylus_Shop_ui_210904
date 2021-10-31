@@ -29,7 +29,7 @@ export const ShoppingCartProvider = (props) => {
             _shopping_list.push(_item_data)
         }
 
-        console.log(_item_data)
+        set_shopping_list(_shopping_list)
     }
 
     return (
