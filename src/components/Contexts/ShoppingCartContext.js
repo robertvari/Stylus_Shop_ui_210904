@@ -12,9 +12,8 @@ export const ShoppingCartProvider = (props) => {
         set_count(count + 1)
     }
 
-
     return (
-        <ShoppingCartProvider.Provider value={{
+        <ShoppingCartContext.Provider value={{
             shopping_list: shopping_list,
             total: total,
             count: count,
@@ -22,6 +21,6 @@ export const ShoppingCartProvider = (props) => {
             add_to_cart: add_to_cart
         }}>
             {props.children}
-        </ShoppingCartProvider.Provider>
+        </ShoppingCartContext.Provider>
     )
 }
