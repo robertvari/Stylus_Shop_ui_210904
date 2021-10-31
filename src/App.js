@@ -13,10 +13,13 @@ import {
 } from "react-router-dom";
 
 import PasswordResetPage from "./components/Users/PasswordResetPage";
+import {ItemListProvider} from "./components/Contexts/ItemListContext";
 
 function App() {
   return (
   <Router>
+      <ItemListProvider>
+
         <div className="App">
             <div>
                 <Header/>
@@ -34,6 +37,8 @@ function App() {
 
             <Footer/>
         </div>
+
+      </ItemListProvider>
   </Router>
   );
 }
