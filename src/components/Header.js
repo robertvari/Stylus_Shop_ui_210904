@@ -29,7 +29,7 @@ function Menu(){
     useEffect(() => {
         axios({
             method: "get",
-            url: `${process.env.REACT_APP_API_URL}/categories`
+            url: `${process.env.REACT_APP_API_URL}/api/categories/`
         }).then(res => set_menu_list(res.data))
     }, [])
 
@@ -54,12 +54,26 @@ function CartButton(){
 }
 
 function Header(props) {
+    const [site_info, set_site_info] = useState(null)
+    const API_URL = process.env.REACT_APP_API_URL
+
+    const fetch_site_info = () => {
+        axios({
+            method: "get",
+            url: `${API_URL}/api/site-info/`
+        }).then(res => set_site_info(res.data))
+    }
+
+    useEffect(()=> {
+        fetch_site_info()
+    }, [])
+
     return (
         <div className="header-container">
 
             <div className="content-container">
                 <div className="title-container">
-                    <Link to="/"><h1>Stylus Shop</h1></Link>
+                    <Link to="/"><h1>{site_info && site_info.name}</h1></Link>
 
                     <div>
                         <small className="sign-in-container"><Link to="/users/login">Sign in</Link> or <Link to="/users/registration">Create an Account</Link></small>
