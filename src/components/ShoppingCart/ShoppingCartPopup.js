@@ -28,7 +28,11 @@ function ShoppingCartPopup(props) {
                             <h2 className="price">${numberWithCommas(total)}</h2>
 
                             <small className="taxes">Shipping, taxes, and discounts will be calculated at checkout.</small>
-                            <button className="inverted">CHECK OUT</button>
+
+                            <Link to={"/checkout"} className={"checkout-button"}>
+                                <button className="inverted" onClick={e => set_visible(false)}>CHECK OUT</button>
+                            </Link>
+
                         </Fragment>
                         :
                         <Fragment>
@@ -36,8 +40,6 @@ function ShoppingCartPopup(props) {
                             <p>Continue browsing <Link to={"/"}>here.</Link>.</p>
                         </Fragment>
                 }
-
-
             </div>
         </div>
     );

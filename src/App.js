@@ -16,6 +16,7 @@ import PasswordResetPage from "./components/Users/PasswordResetPage";
 import {ItemListProvider} from "./components/Contexts/ItemListContext";
 import {ShoppingCartProvider} from "./components/Contexts/ShoppingCartContext";
 import ShoppingCartPopup from "./components/ShoppingCart/ShoppingCartPopup";
+import CheckoutPage from "./components/Pages/CheckoutPage";
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
                         <Switch>
                             <Route path="/categories/:category/:subcategory?" component={ItemListPage}/>
                             <Route path="/details/:slug" component={ItemDetailsPage}/>
+                            <Route path="/checkout/" component={CheckoutPage}/>
+
 
                             <Route path="/users/login" component={SignInPage}/>
                             <Route path="/users/registration" component={RegistrationPage}/>
