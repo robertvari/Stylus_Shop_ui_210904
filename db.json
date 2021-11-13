@@ -49,65 +49,6 @@
         "slug": ""
     }
   ],
-  "slider": [
-    {
-      "id": 0,
-      "image": "https://cdn.shopify.com/s/files/1/0543/1637/files/slide_1_1024x_1080x.jpg?v=1484839477",
-      "slug": ""
-    },
-    {
-      "id": 1,
-      "image": "https://cdn.shopify.com/s/files/1/0543/1637/files/slide_2_1024x_1080x.jpg?v=1484839485",
-      "slug": ""
-    },
-    {
-      "id": 2,
-      "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/Leica-M-A-0005_360x.jpg?v=1484764176",
-      "slug": ""
-    },
-    {
-      "id": 3,
-      "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/Leica_M_Edition_60_1_360x.jpg?v=1484764172",
-      "slug": ""
-    }
-  ],
-  "featured": [
-    {
-      "id": 0,
-      "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/1347910998_125x.jpg?v=1484754685",
-      "title": "Leica S (Typ 006)",
-      "price": 18500,
-      "slug": ""
-    },
-    {
-      "id": 1,
-      "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/Leica_S-002_540x.jpg?v=1484770884",
-      "title": "Leica S (Typ 006) / 70mm Lens Set",
-      "price": 15995,
-      "slug": ""
-    },
-    {
-      "id": 2,
-      "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/emo_Leica_S_Typ007_1_540x.jpg?v=1484764351",
-      "title": "Leica S (Typ 007)",
-      "price": 16900,
-      "slug": ""
-    },
-    {
-      "id": 3,
-      "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/E82_lens_cap_S_720x.jpg?v=1484756588",
-      "title": "Leica S and SL Lens Cap E82",
-      "price": 60,
-      "slug": ""
-    },
-    {
-      "id": 4,
-      "image": "https://cdn.shopify.com/s/files/1/0543/1637/products/100_years_s_720x.jpg?v=1484759453",
-      "title": "Leica S Edition 100 Set",
-      "price": 34500,
-      "slug": ""
-    }
-  ],
   "analog": [
     {
       "id": 0,
@@ -148,6 +89,7 @@
   "items": [
     {
       "id": 0,
+      "featured": true,
       "slug": "leica-m",
       "category": "Cameras",
       "subcategory": "Leica M",
@@ -160,6 +102,7 @@
     },
     {
       "id": 1,
+      "featured": true,
       "slug": "leica-m-type-127",
       "category": "Cameras",
       "subcategory": "Leica M",
@@ -172,6 +115,7 @@
     },
     {
       "id": 2,
+      "featured": true,
       "slug": "leica-m-black",
       "category": "Cameras",
       "subcategory": "Leica M",
@@ -184,6 +128,7 @@
     },
     {
       "id": 3,
+      "featured": true,
       "category": "Cameras",
       "subcategory": "Leica SL",
       "title": "LEICA SL (TYP 601) RIGHT ANGLE FINDER",
@@ -195,6 +140,7 @@
     },
     {
       "id": 4,
+      "featured": true,
       "category": "Cameras",
       "subcategory": "Leica SL",
       "title": "LEICA SL (TYP 601), BLACK",
