@@ -1,7 +1,18 @@
 .checkout-container{
   display: grid;
   grid-template-columns: auto 300px;
+  .costumer-details-container{
+    display: flex;
+    flex-direction: column;
 
+    input{
+      margin: 10px 0;
+    }
+
+    input{
+      margin-right: 10px;
+    }
+  }
   .shopping-cart-container{
     background-color: #eaeaea;
   }
