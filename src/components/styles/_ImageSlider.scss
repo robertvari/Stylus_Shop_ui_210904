@@ -2,14 +2,41 @@
   border: $border-style;
   height: 400px;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
 
   .image-container{
     .slider-image{
       display: none;
+      height: 100%;
     }
 
     .active{
       display: inherit;
+    }
+  }
+
+  .step-button-container{
+    position: absolute;
+    font-size: 60px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    opacity: 0;
+
+    i{
+      cursor: pointer;
+      color: rgba(0, 0, 0, 0.33);
+    }
+  }
+
+  &:hover{
+    .step-button-container{
+      opacity: 1;
+      transition: opacity 1s;
     }
   }
 }

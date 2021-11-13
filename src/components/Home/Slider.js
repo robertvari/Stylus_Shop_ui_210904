@@ -21,6 +21,11 @@ function Slider(props) {
                     featured_list.map((featured_item, index) => <img key={featured_item.id} className={`slider-image ${current_index === index? "active":""}`} src={featured_item.image} alt=""/>)
                 }
             </div>
+
+            <div className="step-button-container">
+                <i className="fas fa-chevron-left"/>
+                <i className="fas fa-chevron-right"/>
+            </div>
         </div>
     );
 }
