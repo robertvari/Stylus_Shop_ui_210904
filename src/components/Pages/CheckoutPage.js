@@ -1,6 +1,7 @@
 import React, {useContext, useState, Fragment} from 'react';
 import {Link} from "react-router-dom";
 import {ShoppingCartContext} from "../Contexts/ShoppingCartContext";
+import CartItem from "../ShoppingCart/CartItem";
 
 function CheckoutPage(props) {
     const {shopping_list, total, count} = useContext(ShoppingCartContext)
@@ -39,8 +40,10 @@ function CheckoutPage(props) {
                 </div>
 
                             <div className="shopping-cart-container">
-                    Shopping cart...
-                </div>
+                                {
+                                    shopping_list.map(data => <CartItem key={data.id} data={data}/>)
+                                }
+                            </div>
                         </Fragment>
                         :
                         <div>

@@ -1,6 +1,6 @@
 .checkout-container{
   display: grid;
-  grid-template-columns: auto 300px;
+  grid-template-columns: auto 500px;
   .costumer-details-container{
     display: flex;
     flex-direction: column;
@@ -15,5 +15,17 @@
   }
   .shopping-cart-container{
     background-color: #eaeaea;
+
+    .cart-item-container{
+      grid-template-columns: 60px auto 80px;
+    }
+
+    .quantity-container{
+      display: none;
+    }
+
+    .delete-item-button{
+      display: none;
+    }
   }
 }

@@ -19,12 +19,12 @@ function CartItem({data}) {
 
     return (
         <div className="cart-item-container">
-            <img src={data.image} alt=""/>
-            <div>{data.title}</div>
+            <img src={data.image} className="cart-item-image" alt=""/>
+            <div className="cart-item-title">{data.title}</div>
             <Quantity quantity={data.quantity} item_id={data.id}/>
-            <h3>${numberWithCommas(data.price)}</h3>
+            <h3 className="cart-item-price">${numberWithCommas(data.price)}</h3>
 
-            <i className="fas fa-trash-alt" onClick={e => remove_from_cart(data.id)}/>
+            <i className="fas fa-trash-alt delete-item-button" onClick={e => remove_from_cart(data.id)}/>
         </div>
     );
 }
