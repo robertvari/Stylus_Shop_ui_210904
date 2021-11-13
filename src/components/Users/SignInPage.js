@@ -4,6 +4,8 @@ import {Link} from "react-router-dom";
 function SignInPage(props) {
     return (
         <div className="content-container">
+            <div className="content-offset"/>
+
             <form>
                 <h3>LOGIN</h3>
 
