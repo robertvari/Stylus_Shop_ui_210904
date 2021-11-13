@@ -2,6 +2,7 @@ import React, {useContext, useState, Fragment} from 'react';
 import {Link} from "react-router-dom";
 import {ShoppingCartContext} from "../Contexts/ShoppingCartContext";
 import CartItem from "../ShoppingCart/CartItem";
+import {numberWithCommas} from "../../utilities";
 
 function CheckoutPage(props) {
     const {shopping_list, total, count} = useContext(ShoppingCartContext)
@@ -43,7 +44,24 @@ function CheckoutPage(props) {
                                 {
                                     shopping_list.map(data => <CartItem key={data.id} data={data}/>)
                                 }
+
+                                <hr/>
+                                <div className="total-price-container">
+                                    <h3>Total</h3>
+                                    <h2>${numberWithCommas(total)}</h2>
+                                </div>
+
+                                <hr/>
+
+                                <div className="card-data-container">
+                                    Bank card details...
+                                </div>
+
+                                <hr/>
+
+                                <button className="inverted">Place order</button>
                             </div>
+
                         </Fragment>
                         :
                         <div>
