@@ -17,28 +17,28 @@ function CheckoutPage(props) {
                     count >0?
                         <Fragment>
                             <div className="costumer-details-container">
-                    <h3>Contact information</h3>
-                    <hr/>
-                    {
-                        !logged_in&& <small>Already have an account? <Link to={"/users/login"}>Log in</Link></small>
-                    }
+                                <h3>Contact information</h3>
+                                <hr/>
+                                {
+                                    !logged_in&& <small className="have-an-account">Already have an account? <Link to={"/users/login"}>Log in</Link></small>
+                                }
 
-                    <input type="email" placeholder="Email"/>
+                                <input type="email" placeholder="Email"/>
 
-                    <h4>Shipping address</h4>
-                    <hr/>
+                                <h4>Shipping address</h4>
+                                <hr/>
 
-                    <div className="name-container">
-                        <input type="text" placeholder="First Name"/>
-                        <input type="text" placeholder="Last Name"/>
-                    </div>
+                                <div className="name-container">
+                                    <input type="text" placeholder="First Name"/>
+                                    <input type="text" placeholder="Last Name"/>
+                                </div>
 
-                    <input type="text" placeholder="Company"/>
-                    <input type="text" placeholder="Address"/>
-                    <input type="text" placeholder="City"/>
-                    <input type="text" placeholder="Post code"/>
-                    <input type="text" placeholder="Phone"/>
-                </div>
+                                <input type="text" placeholder="Company"/>
+                                <input type="text" placeholder="Address"/>
+                                <input type="text" placeholder="City"/>
+                                <input type="text" placeholder="Post code"/>
+                                <input type="text" placeholder="Phone"/>
+                            </div>
 
                             <div className="shopping-cart-container">
                                 {
