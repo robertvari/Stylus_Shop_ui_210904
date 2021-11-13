@@ -1,20 +1,19 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import Slider from "./Slider";
 import ShopFor from "./ShopFor";
 import Home_ItemList from "./Home_ItemList";
 import axios from "axios"
+import {ItemListContext} from "../Contexts/ItemListContext";
 
 
 function HomePage(props) {
+    const {items} = useContext(ItemListContext)
     const [featured_list, set_featured_list] = useState([])
     const [analog_cameras, set_analog_cameras] = useState([])
     const [leica_M, set_leica_M] = useState([])
 
     const fetch_featured_list = () => {
-        axios({
-            method: "get",
-            url: `${process.env.REACT_APP_API_URL}/featured`
-        }).then(res => set_featured_list(res.data))
+        set_featured_list(items.filter(item => item.featured))
     }
 
     const fetch_analog_cameras = () => {
@@ -32,10 +31,13 @@ function HomePage(props) {
     }
 
     useEffect(() => {
-        fetch_featured_list()
         fetch_analog_cameras()
         fetch_leica_M()
     }, [])
+
+    useEffect(()=>{
+        fetch_featured_list()
+    }, [items])
 
     return (
         <div className="content-container">

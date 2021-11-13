@@ -1,6 +1,15 @@
 .slider-container{
-  background-color: #508dbd;
+  border: $border-style;
   height: 400px;
-
   color: white;
+
+  .image-container{
+    .slider-image{
+      display: none;
+    }
+
+    .active{
+      display: inherit;
+    }
+  }
 }
