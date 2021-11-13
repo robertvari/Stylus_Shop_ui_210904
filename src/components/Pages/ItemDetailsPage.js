@@ -2,6 +2,8 @@ import React, {useContext, useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 import {ItemListContext} from "../Contexts/ItemListContext";
 import {ShoppingCartContext} from "../Contexts/ShoppingCartContext";
+import {numberWithCommas} from "../../utilities";
+
 
 function ItemPage({data}){
     const {add_to_cart} = useContext(ShoppingCartContext)
@@ -13,7 +15,7 @@ function ItemPage({data}){
 
         <div>
             <h3>{data.title}</h3>
-            <h4>{data.price}</h4>
+            <h2>${numberWithCommas(data.price)}</h2>
 
             <hr/>
 

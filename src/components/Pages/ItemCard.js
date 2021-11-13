@@ -8,7 +8,7 @@ function ItemCard({data}) {
         <Link to={`/details/${data.slug}`} className="item-card">
             <img src={data.image} alt=""/>
             <div className="title">{data.title}</div>
-            <div className="price">{numberWithCommas(data.price)}</div>
+            <div className="price">${numberWithCommas(data.price)}</div>
         </Link>
     );
 }

@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import {ShoppingCartContext} from "../Contexts/ShoppingCartContext";
+import {numberWithCommas} from "../../utilities";
 
 
 function Quantity({quantity, item_id}){
@@ -21,7 +22,7 @@ function CartItem({data}) {
             <img src={data.image} alt=""/>
             <div>{data.title}</div>
             <Quantity quantity={data.quantity} item_id={data.id}/>
-            <h3>${data.price}</h3>
+            <h3>${numberWithCommas(data.price)}</h3>
 
             <i className="fas fa-trash-alt" onClick={e => remove_from_cart(data.id)}/>
         </div>

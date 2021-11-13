@@ -1,6 +1,8 @@
 import React, {useContext} from 'react';
 import {ShoppingCartContext} from "../Contexts/ShoppingCartContext";
 import CartItem from "./CartItem";
+import {numberWithCommas} from "../../utilities";
+
 
 function ShoppingCartPopup(props) {
     const {shopping_list, total, visible, set_visible} = useContext(ShoppingCartContext)
@@ -18,7 +20,7 @@ function ShoppingCartPopup(props) {
                 }
                 <hr/>
 
-                <h2 className="price">${total}</h2>
+                <h2 className="price">${numberWithCommas(total)}</h2>
 
                 <small className="taxes">Shipping, taxes, and discounts will be calculated at checkout.</small>
                 <button className="inverted">CHECK OUT</button>
