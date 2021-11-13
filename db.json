@@ -129,6 +129,7 @@
     {
       "id": 3,
       "featured": true,
+      "slug": "leica-m-sl-type-601",
       "category": "Cameras",
       "subcategory": "Leica SL",
       "title": "LEICA SL (TYP 601) RIGHT ANGLE FINDER",
@@ -141,6 +142,7 @@
     {
       "id": 4,
       "featured": true,
+      "slug": "leica-m-sl-type-601-black",
       "category": "Cameras",
       "subcategory": "Leica SL",
       "title": "LEICA SL (TYP 601), BLACK",

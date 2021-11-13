@@ -1,5 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {ItemListContext} from "../Contexts/ItemListContext";
+import {Link} from "react-router-dom";
+
 
 function Slider(props) {
     const {items} = useContext(ItemListContext)
@@ -27,19 +29,21 @@ function Slider(props) {
         fetch_featured_list()
     }, [items])
 
-    return (
-        <div className="slider-container">
-            <div className="image-container">
-                {
-                    featured_list.map((featured_item, index) => <img key={featured_item.id} className={`slider-image ${current_index === index? "active":""}`} src={featured_item.image} alt=""/>)
-                }
-            </div>
+    if(items.length === 0) return null
 
-            <div className="step-button-container">
-                <i className="fas fa-chevron-left" onClick={e => step_action(-1)}/>
-                <i className="fas fa-chevron-right" onClick={e => step_action(1)}/>
+    return (
+            <div className="slider-container">
+                <Link to={`/details/${items[current_index].slug}`}>
+                    <div className="image-container">
+                        {
+                            featured_list.map((featured_item, index) => <img key={featured_item.id} className={`slider-image ${current_index === index? "active":""}`} src={featured_item.image} alt=""/>)
+                        }
+                    </div>
+                </Link>
+
+                <i className="fas fa-chevron-left left-step-button" onClick={e => step_action(-1)}/>
+                <i className="fas fa-chevron-right right-step-button" onClick={e => step_action(1)}/>
             </div>
-        </div>
     );
 }
 

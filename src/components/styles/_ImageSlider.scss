@@ -19,18 +19,20 @@
     }
   }
 
-  .step-button-container{
+  .left-step-button, .right-step-button{
+    cursor: pointer;
     position: absolute;
     font-size: 60px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    opacity: 0;
+    color: rgba(0, 0, 0, 0.33);
+    top: 50% -30px;
+  }
 
-    i{
-      cursor: pointer;
-      color: rgba(0, 0, 0, 0.33);
-    }
+  .left-step-button{
+    left: 0;
+  }
+
+  .right-step-button{
+    right: 0;
   }
 
   &:hover{
