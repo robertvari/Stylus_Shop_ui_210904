@@ -1,0 +1,8 @@
+.checkout-container{
+  display: grid;
+  grid-template-columns: auto 300px;
+
+  .shopping-cart-container{
+    background-color: #eaeaea;
+  }
+}
