@@ -4,7 +4,20 @@ import {ItemListContext} from "../Contexts/ItemListContext";
 function Slider(props) {
     const {items} = useContext(ItemListContext)
     const [featured_list, set_featured_list] = useState([])
-    const [current_index, set_current_index] = useState(1)
+    const [current_index, set_current_index] = useState(0)
+
+    const step_action = (value) => {
+        let _index = current_index
+        _index += value
+
+        if(_index > featured_list.length - 1 ){
+            _index = 0
+        }else if (_index < 0){
+           _index =  featured_list.length - 1
+        }
+
+        set_current_index(_index)
+    }
 
     const fetch_featured_list = () => {
         set_featured_list(items.filter(item => item.featured))
@@ -23,8 +36,8 @@ function Slider(props) {
             </div>
 
             <div className="step-button-container">
-                <i className="fas fa-chevron-left"/>
-                <i className="fas fa-chevron-right"/>
+                <i className="fas fa-chevron-left" onClick={e => step_action(-1)}/>
+                <i className="fas fa-chevron-right" onClick={e => step_action(1)}/>
             </div>
         </div>
     );
