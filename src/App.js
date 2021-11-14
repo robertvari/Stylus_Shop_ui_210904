@@ -17,10 +17,12 @@ import {ItemListProvider} from "./components/Contexts/ItemListContext";
 import {ShoppingCartProvider} from "./components/Contexts/ShoppingCartContext";
 import ShoppingCartPopup from "./components/ShoppingCart/ShoppingCartPopup";
 import CheckoutPage from "./components/Pages/CheckoutPage";
+import {UserProvider} from "./components/Contexts/UserContext";
 
 function App() {
   return (
   <Router>
+      <UserProvider>
       <ItemListProvider>
             <ShoppingCartProvider>
 
@@ -48,6 +50,8 @@ function App() {
 
             </ShoppingCartProvider>
       </ItemListProvider>
+
+    </UserProvider>
   </Router>
   );
 }
