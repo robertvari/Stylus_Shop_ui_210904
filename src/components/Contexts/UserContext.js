@@ -18,7 +18,7 @@ export const UserProvider = (props) => {
                 password: password
             }
         })
-            .then(res => res.data.key)
+            .then(res => console.log(res.data.key))
             .catch(error => console.log(error.response.status))
     }
 

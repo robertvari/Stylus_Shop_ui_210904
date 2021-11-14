@@ -18,6 +18,7 @@ import {ShoppingCartProvider} from "./components/Contexts/ShoppingCartContext";
 import ShoppingCartPopup from "./components/ShoppingCart/ShoppingCartPopup";
 import CheckoutPage from "./components/Pages/CheckoutPage";
 import {UserProvider} from "./components/Contexts/UserContext";
+import Profile from "./components/Users/Profile";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
 
 
                             <Route path="/users/login" component={SignInPage}/>
+                            <Route path="/users/:slug" component={Profile}/>
                             <Route path="/users/registration" component={RegistrationPage}/>
                             <Route path="/users/password-reset" component={PasswordResetPage}/>
                             <Route path="/" component={HomePage}/>
