@@ -6,7 +6,6 @@ export const UserContext = createContext(true)
 export const UserProvider = (props) => {
     return (
         <UserContext.Provider value={{
-            items: items
         }}>
             {props.children}
         </UserContext.Provider>
