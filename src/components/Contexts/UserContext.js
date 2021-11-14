@@ -11,10 +11,17 @@ export const UserProvider = (props) => {
 
     const API_URL = process.env.REACT_APP_API_URL
 
+    const check_token = () => {
+        if(cookies.token){
+            set_token(cookies.token)
+            set_set_logged_in(true)
+        }
+    }
+
     const _store_token = (value) => {
         set_token(value)
         setCookie("token", value, {path:"/", sameSite:"strict", maxAge:86400})
-        console.log("_store_token", value)
+        set_set_logged_in(true)
     }
     
     const _remove_token = () => {
@@ -46,10 +53,15 @@ export const UserProvider = (props) => {
         }).then(res => _remove_token())
     }
 
+    useEffect(()=>{
+        check_token()
+    }, [])
+
     return (
         <UserContext.Provider value={{
             log_in_user: log_in_user,
-            logout_user: logout_user
+            logout_user: logout_user,
+            logged_in: logged_in
         }}>
             {props.children}
         </UserContext.Provider>

@@ -40,9 +40,9 @@ function App() {
 
 
                             <Route path="/users/login" component={SignInPage}/>
-                            <Route path="/users/:slug" component={Profile}/>
                             <Route path="/users/registration" component={RegistrationPage}/>
                             <Route path="/users/password-reset" component={PasswordResetPage}/>
+                            <Route path="/users/:slug" component={Profile}/>
                             <Route path="/" component={HomePage}/>
                         </Switch>
                     </div>

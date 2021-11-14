@@ -2,6 +2,7 @@ import React, {useContext, useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
 import axios from "axios"
 import {ShoppingCartContext} from "./Contexts/ShoppingCartContext";
+import {UserContext} from "./Contexts/UserContext";
 
 function MenuItem({item_data}){
 
@@ -54,6 +55,7 @@ function CartButton(){
 }
 
 function Header(props) {
+    const {logged_in, logout_user} = useContext(UserContext)
     const [site_info, set_site_info] = useState(null)
     const API_URL = process.env.REACT_APP_API_URL
 
@@ -76,7 +78,19 @@ function Header(props) {
                     <Link to="/"><h1>{site_info && site_info.name}</h1></Link>
 
                     <div>
-                        <small className="sign-in-container"><Link to="/users/login">Sign in</Link> or <Link to="/users/registration">Create an Account</Link></small>
+                        {
+                            logged_in?
+                                <div className="logged-in-container">
+                                    <Link to="/users/robert">
+                                        <i className="fas fa-user"/>
+                                    </Link>
+
+                                    <button onClick={logout_user}>Log Out</button>
+                                </div>
+                                :
+                                <small className="sign-in-container"><Link to="/users/login">Sign in</Link> or <Link to="/users/registration">Create an Account</Link></small>
+                        }
+
                         <br/>
 
                         <div className="search-box">
