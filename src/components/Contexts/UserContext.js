@@ -106,6 +106,25 @@ export const UserProvider = (props) => {
         )
     }
 
+    const update_profile = async () => {
+        await axios({
+            method: "patch",
+            url: `${API_URL}/api/users/profile/`,
+            headers: {
+                authorization: `token ${token}`
+            },
+            data:{
+                first_name: first_name,
+                last_name: last_name,
+                company: company,
+                address: address,
+                city: city,
+                post_code: post_code,
+                phone: phone
+            }
+        })
+    }
+
     useEffect(()=>{
         check_token()
     }, [])
