@@ -20,6 +20,7 @@ import CheckoutPage from "./components/Pages/CheckoutPage";
 import {UserProvider} from "./components/Contexts/UserContext";
 import Profile from "./components/Users/Profile";
 import RegistrationEmailSentPage from "./components/Users/RegistrationEmailSentPage";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 
 function App() {
@@ -44,7 +45,9 @@ function App() {
                             <Route path="/users/registration" component={RegistrationPage}/>
                             <Route path="/users/password-reset" component={PasswordResetPage}/>
                             <Route path="/users/registration-email-sent" component={RegistrationEmailSentPage}/>
-                            <Route path="/users/profile" component={Profile}/>
+
+                            <ProtectedRoute path="/users/profile" component={Profile}/>
+
                             <Route path="/" component={HomePage}/>
                         </Switch>
                     </div>
