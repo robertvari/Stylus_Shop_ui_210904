@@ -53,6 +53,24 @@ export const UserProvider = (props) => {
         }).then(res => _remove_token())
     }
 
+    const register_user = async (email, password) =>{
+        try{
+            const result = await axios({
+                method: "post",
+                url: `${API_URL}/api/auth/registration/`,
+                data: {
+                    email: email,
+                    password1: password,
+                    password2: password
+                }
+            })
+
+            return result.status === 201
+        }catch (err){
+            return false
+        }
+    }
+
     useEffect(()=>{
         check_token()
     }, [])
