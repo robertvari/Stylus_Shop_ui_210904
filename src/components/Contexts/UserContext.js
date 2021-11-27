@@ -92,6 +92,15 @@ export const UserProvider = (props) => {
             }
         }).then(res => {
             let profile_data = res.data.profile
+            set_user_id(res.data.user_id)
+            set_email(res.data.email)
+            set_first_name(res.data.profile.first_name)
+            set_last_name(res.data.profile.last_name)
+            set_company(res.data.profile.company)
+            set_address(res.data.profile.address)
+            set_city(res.data.profile.city)
+            set_post_code(res.data.profile.post_code)
+            set_phone(res.data.profile.phone)
             }
         )
     }
