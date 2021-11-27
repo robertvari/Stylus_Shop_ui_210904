@@ -40,7 +40,7 @@ function RegistrationPage(props) {
             return
         }
 
-        history.push("/registration-email-sent")
+        history.push("/users/registration-email-sent")
     }
 
     return (

@@ -19,6 +19,8 @@ import ShoppingCartPopup from "./components/ShoppingCart/ShoppingCartPopup";
 import CheckoutPage from "./components/Pages/CheckoutPage";
 import {UserProvider} from "./components/Contexts/UserContext";
 import Profile from "./components/Users/Profile";
+import RegistrationEmailSentPage from "./components/Users/RegistrationEmailSentPage";
+
 
 function App() {
   return (
@@ -38,10 +40,10 @@ function App() {
                             <Route path="/details/:slug" component={ItemDetailsPage}/>
                             <Route path="/checkout/" component={CheckoutPage}/>
 
-
                             <Route path="/users/login" component={SignInPage}/>
                             <Route path="/users/registration" component={RegistrationPage}/>
                             <Route path="/users/password-reset" component={PasswordResetPage}/>
+                            <Route path="/users/registration-email-sent" component={RegistrationEmailSentPage}/>
                             <Route path="/users/:slug" component={Profile}/>
                             <Route path="/" component={HomePage}/>
                         </Switch>
