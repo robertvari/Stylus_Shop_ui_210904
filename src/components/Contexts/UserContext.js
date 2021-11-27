@@ -79,6 +79,8 @@ export const UserProvider = (props) => {
         <UserContext.Provider value={{
             log_in_user: log_in_user,
             logout_user: logout_user,
+            register_user: register_user,
+
             logged_in: logged_in
         }}>
             {props.children}

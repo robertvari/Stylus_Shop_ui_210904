@@ -1,7 +1,10 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {Link, useHistory} from "react-router-dom";
+import {UserContext} from "../Contexts/UserContext";
 
 function RegistrationPage(props) {
+    const {register_user} = useContext(UserContext)
+
     const [email, set_email] = useState("")
     const [password1, set_password1] = useState("")
     const [password2, set_password2] = useState("")
@@ -9,7 +12,7 @@ function RegistrationPage(props) {
     const [waiting, set_waiting] = useState(false)
     const history = useHistory();
 
-    const handle_button_clicked = (e) => {
+    const handle_button_clicked = async (e) => {
         e.preventDefault()
         set_error(null)
 
@@ -27,7 +30,17 @@ function RegistrationPage(props) {
             set_error("Passwords doesn't match")
         }
 
-        console.log("New user is registering", email)
+        set_waiting(true)
+        let result = await register_user(email, password1)
+
+        set_waiting(false)
+
+        if(!result){
+            set_error("This email already exists")
+            return
+        }
+
+        history.push("/registration-email-sent")
     }
 
     return (
