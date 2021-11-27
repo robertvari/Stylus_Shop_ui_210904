@@ -1,10 +1,28 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {UserContext} from "../Contexts/UserContext";
 
 function Profile(props) {
+    const {
+        first_name,
+        set_first_name,
+        last_name,
+        set_last_name,
+        company,
+        set_company,
+        address,
+        set_address,
+        city,
+        set_city,
+        post_code,
+        set_post_code,
+        phone,
+        set_phone
+    } = useContext(UserContext)
+
     return (
         <div className="content-container">
             <div className="content-offset"/>
-            
+
             <form className="profile-form">
                 <h2>Profile</h2>
                 <hr/>
