@@ -8,6 +8,18 @@ export const UserProvider = (props) => {
     const [logged_in, set_set_logged_in] = useState(false)
     const [token, set_token] = useState(null)
     const [cookies, setCookie, removeCookie] = useCookies()
+    
+    const [email, set_email] = useState("")
+    const [first_name, set_first_name] = useState("")
+    const [last_name, set_last_name] = useState("")
+    const [company, set_company] = useState("")
+    const [address, set_address] = useState("")
+    const [city, set_city] = useState("")
+    const [post_code, set_post_code] = useState("")
+    const [phone, set_phone] = useState("")
+    const [user_id, set_user_id] = useState(null)
+    const [profile_url, set_profile_url] = useState("")
+
 
     const API_URL = process.env.REACT_APP_API_URL
 
@@ -71,9 +83,28 @@ export const UserProvider = (props) => {
         }
     }
 
+    const fetch_profile = () => {
+        axios({
+            method: "get",
+            url: `${API_URL}/api/users/profile/`,
+            headers: {
+                authorization: `token ${token}`
+            }
+        }).then(res => {
+            let profile_data = res.data.profile
+            }
+        )
+    }
+
     useEffect(()=>{
         check_token()
     }, [])
+
+    useEffect(() => {
+        if(logged_in){
+
+        }
+    }, [logged_in])
 
     return (
         <UserContext.Provider value={{
