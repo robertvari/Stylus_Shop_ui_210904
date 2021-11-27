@@ -101,6 +101,7 @@ export const UserProvider = (props) => {
             set_city(res.data.profile.city)
             set_post_code(res.data.profile.post_code)
             set_phone(res.data.profile.phone)
+            set_profile_url(res.data.profile.slug)
             }
         )
     }
@@ -111,7 +112,7 @@ export const UserProvider = (props) => {
 
     useEffect(() => {
         if(logged_in){
-
+            fetch_profile()
         }
     }, [logged_in])
 
