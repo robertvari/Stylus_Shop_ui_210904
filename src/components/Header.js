@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react';
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import axios from "axios"
 import {ShoppingCartContext} from "./Contexts/ShoppingCartContext";
 import {UserContext} from "./Contexts/UserContext";
@@ -58,12 +58,18 @@ function Header(props) {
     const {logged_in, logout_user} = useContext(UserContext)
     const [site_info, set_site_info] = useState(null)
     const API_URL = process.env.REACT_APP_API_URL
+    const history = useHistory()
 
     const fetch_site_info = () => {
         axios({
             method: "get",
             url: `${API_URL}/api/site-info/`
         }).then(res => set_site_info(res.data))
+    }
+
+    const log_out_clicked = async () => {
+        await logout_user()
+        history.push("/")
     }
 
     useEffect(()=> {
@@ -81,11 +87,11 @@ function Header(props) {
                         {
                             logged_in?
                                 <div className="logged-in-container">
-                                    <Link to="/users/robert">
+                                    <Link to="/users/profile">
                                         <i className="fas fa-user"/>
                                     </Link>
 
-                                    <button onClick={logout_user}>Log Out</button>
+                                    <button onClick={log_out_clicked}>Log Out</button>
                                 </div>
                                 :
                                 <small className="sign-in-container"><Link to="/users/login">Sign in</Link> or <Link to="/users/registration">Create an Account</Link></small>

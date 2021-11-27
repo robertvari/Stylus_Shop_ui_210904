@@ -62,7 +62,20 @@ export const UserProvider = (props) => {
             headers:{
                 authorization: `token ${token}`
             }
-        }).then(res => _remove_token())
+        })
+
+        _remove_token()
+
+        set_email("")
+        set_first_name("")
+        set_last_name("")
+        set_profile_url("")
+        set_phone("")
+        set_user_id(null)
+        set_post_code("")
+        set_city("")
+        set_address("")
+        set_company("")
     }
 
     const register_user = async (email, password) =>{
