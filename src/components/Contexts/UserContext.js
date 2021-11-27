@@ -156,6 +156,7 @@ export const UserProvider = (props) => {
             logout_user: logout_user,
             register_user: register_user,
             update_profile: update_profile,
+            check_token:check_token,
 
             logged_in: logged_in,
             user_id: user_id,
