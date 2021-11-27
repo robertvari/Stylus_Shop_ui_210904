@@ -122,7 +122,26 @@ export const UserProvider = (props) => {
             logout_user: logout_user,
             register_user: register_user,
 
-            logged_in: logged_in
+            logged_in: logged_in,
+            user_id: user_id,
+            email: email,
+            set_email:set_email,
+
+            first_name: first_name,
+            set_first_name: set_first_name,
+            last_name: last_name,
+            set_last_name: set_last_name,
+            company: company,
+            set_company: set_company,
+            address: address,
+            set_address: set_address,
+            city: city,
+            set_city: set_city,
+            post_code: post_code,
+            set_post_code: set_post_code,
+            phone: phone,
+            set_phone: set_phone,
+            profile_url: profile_url
         }}>
             {props.children}
         </UserContext.Provider>
