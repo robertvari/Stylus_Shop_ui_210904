@@ -14,7 +14,7 @@ function SignInPage(props) {
         if(email.length === 0 || password.length === 0) return
 
         await log_in_user(email, password)
-        history.push("/users/robert")
+        history.push("/users/profile")
     }
 
     return (
