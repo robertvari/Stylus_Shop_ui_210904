@@ -123,6 +123,8 @@ export const UserProvider = (props) => {
                 phone: phone
             }
         })
+
+        fetch_profile()
     }
 
     useEffect(()=>{
@@ -140,6 +142,7 @@ export const UserProvider = (props) => {
             log_in_user: log_in_user,
             logout_user: logout_user,
             register_user: register_user,
+            update_profile: update_profile,
 
             logged_in: logged_in,
             user_id: user_id,

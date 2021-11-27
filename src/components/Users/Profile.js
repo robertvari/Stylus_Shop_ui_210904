@@ -16,8 +16,14 @@ function Profile(props) {
         post_code,
         set_post_code,
         phone,
-        set_phone
+        set_phone,
+        update_profile
     } = useContext(UserContext)
+
+    const update_clicked = (e) => {
+        e.preventDefault()
+        update_profile()
+    }
 
     return (
         <div className="content-container">
@@ -40,7 +46,7 @@ function Profile(props) {
 
                 <hr/>
 
-                <button className="inverted">UPDATE</button>
+                <button className="inverted" onClick={update_clicked}>UPDATE</button>
             </form>
         </div>
     );
