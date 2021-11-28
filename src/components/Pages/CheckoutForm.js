@@ -12,7 +12,7 @@ function StripeForm(props) {
   const elements = useElements();
   const history = useHistory()
 
-  const {count, shopping_list, set_shopping_list, total} = useContext(ShoppingCartContext)
+  const {shopping_list, clear_shopping_list, total} = useContext(ShoppingCartContext)
   const {
         first_name,
         last_name,
@@ -65,7 +65,7 @@ function StripeForm(props) {
 
       const res = await axios({
             method: "post",
-            url: `${API_URL}/api/shop/order/`,
+            url: `${API_URL}/api/order/`,
             data: {
                 payment_id: id,
                 amount: total * 100,
@@ -87,8 +87,7 @@ function StripeForm(props) {
         })
 
       if(res.data.status === "succeeded"){
-        set_shopping_list([])
-        localStorage.setItem("shopping_list", JSON.stringify([]))
+        clear_shopping_list()
         history.push("/payment_success")
       }
     }

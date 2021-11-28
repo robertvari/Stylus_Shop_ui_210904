@@ -15,6 +15,10 @@ export const ShoppingCartProvider = (props) => {
         localStorage.setItem("shopping_list", JSON.stringify(new_shopping_list))
     }
 
+    const clear_shopping_list = () => {
+        set_new_shopping_list([])
+    }
+
     const set_quantity = (item_id, value) => {
         const _shopping_list = [...shopping_list]
         for(let i=0; i<_shopping_list.length;i++){
@@ -108,7 +112,8 @@ export const ShoppingCartProvider = (props) => {
 
             add_to_cart: add_to_cart,
             remove_from_cart: remove_from_cart,
-            set_quantity: set_quantity
+            set_quantity: set_quantity,
+            clear_shopping_list: clear_shopping_list
         }}>
             {props.children}
         </ShoppingCartContext.Provider>
