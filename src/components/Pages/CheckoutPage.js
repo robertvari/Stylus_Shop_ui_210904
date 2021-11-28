@@ -3,10 +3,21 @@ import {Link} from "react-router-dom";
 import {ShoppingCartContext} from "../Contexts/ShoppingCartContext";
 import CartItem from "../ShoppingCart/CartItem";
 import {numberWithCommas} from "../../utilities";
+import {UserContext} from "../Contexts/UserContext";
 
 function CheckoutPage(props) {
     const {shopping_list, total, count} = useContext(ShoppingCartContext)
-    const [logged_in, set_logged_in] = useState(false)
+    const {
+        email,
+        first_name,
+        last_name,
+        company,
+        address,
+        city,
+        post_code,
+        phone,
+        logged_in
+    } = useContext(UserContext)
 
     return (
         <div className="content-container">
@@ -23,21 +34,68 @@ function CheckoutPage(props) {
                                     !logged_in&& <small className="have-an-account">Already have an account? <Link to={"/users/login"}>Log in</Link></small>
                                 }
 
-                                <input type="email" placeholder="Email"/>
+                                {
+                                    email?
+                                        <input type="email" placeholder="Email" value={email}/>
+                                        :
+                                        <input type="email" placeholder="Email"/>
+                                }
+
 
                                 <h4>Shipping address</h4>
                                 <hr/>
 
                                 <div className="name-container">
-                                    <input type="text" placeholder="First Name"/>
-                                    <input type="text" placeholder="Last Name"/>
+                                    {
+                                        first_name?
+                                            <input type="text" placeholder="First Name" value={first_name}/>
+                                            :
+                                            <input type="text" placeholder="First Name"/>
+                                    }
+
+                                    {
+                                        last_name?
+                                            <input type="text" placeholder="Last Name" value={last_name}/>
+                                            :
+                                            <input type="text" placeholder="Last Name"/>
+                                    }
+
                                 </div>
 
-                                <input type="text" placeholder="Company"/>
-                                <input type="text" placeholder="Address"/>
-                                <input type="text" placeholder="City"/>
-                                <input type="text" placeholder="Post code"/>
-                                <input type="text" placeholder="Phone"/>
+                                {
+                                    company?
+                                        <input type="text" placeholder="Company" value={company}/>
+                                        :
+                                        <input type="text" placeholder="Company"/>
+                                }
+
+                                {
+                                    address?
+                                        <input type="text" placeholder="Address" value={address}/>
+                                        :
+                                        <input type="text" placeholder="Address"/>
+                                }
+
+                                {
+                                    city?
+                                        <input type="text" placeholder="City" value={city}/>
+                                        :
+                                        <input type="text" placeholder="City"/>
+                                }
+
+                                {
+                                    post_code?
+                                        <input type="text" placeholder="Post code" value={post_code}/>
+                                        :
+                                        <input type="text" placeholder="Post code"/>
+                                }
+
+                                {
+                                    phone?
+                                        <input type="text" placeholder="Phone" value={phone}/>
+                                        :
+                                        <input type="text" placeholder="Phone"/>
+                                }
                             </div>
 
                             <div className="shopping-cart-container">
