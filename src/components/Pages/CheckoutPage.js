@@ -4,6 +4,11 @@ import {ShoppingCartContext} from "../Contexts/ShoppingCartContext";
 import CartItem from "../ShoppingCart/CartItem";
 import {numberWithCommas} from "../../utilities";
 import {UserContext} from "../Contexts/UserContext";
+import CheckoutForm from "./CheckoutForm";
+import {Elements} from '@stripe/react-stripe-js';
+import {loadStripe} from '@stripe/stripe-js';
+
+const stripePromise = loadStripe('pk_test_51HyehYF9rSH7raBvQsbdg02wPMcRm0RtwPGOxBNlB0BNRdzAQIpSeptP48fGtvNBQDAwckdPkJzTMQUPFrlYWkH500JF4oGXW5');
 
 function CheckoutPage(props) {
     const {shopping_list, total, count} = useContext(ShoppingCartContext)
@@ -112,12 +117,10 @@ function CheckoutPage(props) {
                                 <hr/>
 
                                 <div className="card-data-container">
-                                    Bank card details...
+                                    <Elements stripe={stripePromise}>
+                                        <CheckoutForm/>
+                                    </Elements>
                                 </div>
-
-                                <hr/>
-
-                                <button className="inverted">Place order</button>
                             </div>
 
                         </Fragment>

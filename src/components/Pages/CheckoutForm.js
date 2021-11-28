@@ -1,9 +1,9 @@
 import React, {useContext} from 'react';
 import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
-import {ShoppingCartContext} from "../contexts/ShoppingCartContext";
-import {UserContext} from "../contexts/UserContext";
+import {UserContext} from "../Contexts/UserContext";
 import axios from "axios";
 import {useHistory} from "react-router-dom";
+import {ShoppingCartContext} from "../Contexts/ShoppingCartContext";
 
 const API_URL = process.env.REACT_APP_API_URL
 
