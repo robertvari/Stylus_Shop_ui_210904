@@ -96,6 +96,29 @@ export const UserProvider = (props) => {
         }
     }
 
+    const send_password_reset_email = async (email) => {
+        await axios({
+            method: "post",
+            url: `${API_URL}/api/auth/password/reset/`,
+            data:{
+                email: email
+            }
+        })
+    }
+
+    const reset_password = async (password, uid, token) => {
+        await axios({
+            method: "post",
+            url: `${API_URL}/api/auth/password/reset/confirm/`,
+            data:{
+                new_password1: password,
+                new_password2: password,
+                uid: uid,
+                token: token
+            }
+        })
+    }
+
     const fetch_profile = () => {
         axios({
             method: "get",
@@ -157,6 +180,8 @@ export const UserProvider = (props) => {
             register_user: register_user,
             update_profile: update_profile,
             check_token:check_token,
+            send_password_reset_email:send_password_reset_email,
+            reset_password:reset_password,
 
             logged_in: logged_in,
             user_id: user_id,

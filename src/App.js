@@ -20,6 +20,8 @@ import CheckoutPage from "./components/Pages/CheckoutPage";
 import {UserProvider} from "./components/Contexts/UserContext";
 import Profile from "./components/Users/Profile";
 import RegistrationEmailSentPage from "./components/Users/RegistrationEmailSentPage";
+import PasswordResetEmailSentPage from "./components/Users/PasswordResetEmailSentPage";
+import PasswordResetForm from "./components/Users/PasswordResetForm";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 
@@ -45,6 +47,8 @@ function App() {
                             <Route path="/users/registration" component={RegistrationPage}/>
                             <Route path="/users/password-reset" component={PasswordResetPage}/>
                             <Route path="/users/registration-email-sent" component={RegistrationEmailSentPage}/>
+                            <Route path="/users/password-reset-email-sent" component={PasswordResetEmailSentPage}/>
+                            <Route path="/password-reset-form/:uid/:token" component={PasswordResetForm}/>
 
                             <ProtectedRoute path="/users/profile" component={Profile}/>
 

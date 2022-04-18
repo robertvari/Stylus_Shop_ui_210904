@@ -24,6 +24,7 @@ function HomePage(props) {
     }
 
     const fetch_leica_M = () => {
+        console.log(`${process.env.REACT_APP_API_URL}/leica_m`)
         axios({
             method: "get",
             url: `${process.env.REACT_APP_API_URL}/leica_m`
@@ -31,8 +32,8 @@ function HomePage(props) {
     }
 
     useEffect(() => {
-        fetch_analog_cameras()
-        fetch_leica_M()
+        // fetch_analog_cameras()
+        // fetch_leica_M()
     }, [])
 
     useEffect(()=>{
